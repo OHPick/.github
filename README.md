@@ -462,7 +462,7 @@ List<ChatMessage> messages = chatMessageRepository.findAllByRoomOrderByIdAsc(roo
   
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 유저 테스트 🧑🏻‍💻<br>
 
-### 🌱 39명의 유저에게 총 83건의 테스트 피드백을 얻었습니다.
+#### 🌱 39명의 유저에게 총 83건의 테스트 피드백을 얻었습니다.
 
 <details>
   <summary> <b>유저테스트 결과</b> </summary>
@@ -756,7 +756,7 @@ light-house에서 제시하는 경고를 확인하고, 웹 접근성에서 추�
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 팀원 소개 & 팀원 역할 👨‍👩‍👧‍👦 <br>
 <br>
 
-| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>**역할** |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>  **이름**  | **담당** | **Github** | **E-mail** |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>**역할** |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>  **이름**  | **담당** | **Github** | **E-mail** |
 | :---: | :---: | --- | :---: | :---: |
 | FE ⭐<br> `Leader` | 이준영  | 로그인(일반) <br> 소셜 로그인(카카오) <br> 인트로페이지 <br> 메인페이지 <br>  글작성 페이지 <br> 검색 기능 <br> 필터(정렬, 지역) <br> 지도 API <br> 위치 검색, 페이지네이션 <br> 무한스크롤 <br> 채팅, 멀티 이미지| https://github.com/junvely | junvely97@gmail.com |
 | FE | 왕정민 | 상세 페이지 <br> 예약 및 예약 확인 페이지 <br> 글 작성 페이지(멀티이미지 업로드) <br> 글 수정 페이지 <br> 마이페이지 <br> 채팅 목록 및 채팅 룸 <br> 이메일 인증 <br> 회원가입 | https://github.com/v-va | poruch0915@gmail.com |
