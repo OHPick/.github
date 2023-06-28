@@ -39,6 +39,7 @@
 
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 주요 기능 ⚡<br>
 
+![KakaoTalk_20230620_001046503_02](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/6e9fc9a7-d0b4-477b-8977-451c6204e4aa)
 
 <details>
   <summary> 1️⃣ 게시글 CRUD 기능 (포스트 작성, 조회, 수정, 삭제) </summary>
