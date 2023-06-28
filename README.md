@@ -1,4 +1,4 @@
-# ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/41701308-8bb6-46fb-b7c3-f8c3d853ac82) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/9d235ca3-9ec3-4c08-986c-fdf8833963a7) 프로젝트 소개
+# ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/6ddba813-6569-4236-9e1c-dbd879660e15)![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/5e1c80f9-72cb-41b7-9d96-0f7c173fe831) 프로젝트 소개
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/aae14924-4528-4e0c-b1b7-524d75168549)
 
 > ✨ 주특기 : `React``Spring`
