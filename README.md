@@ -1,13 +1,13 @@
-# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) Project
+# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) Project소개
 <br>
 
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/431fe537-fb2b-4583-85d9-7b7ce990d0fd)
 
 
 > ✨ 주특기 : `React` `Spring` <br>
-
+>
 > 🚩 개발 기간 : 2023.05.23 ~ 2023.06.29 <br>
-
+>
 > ➡️ URL : https://ohpick.shop/
 
 <br>
@@ -17,8 +17,7 @@
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 서비스 소개 <br>
 
 
-    📢 저희 'OhPick'은 우리만의 오피스 공간이 필요하신 분들을 위해 개인이 가진 공간을 
-    오피스 공간으로 공유, 대여할 수 있도록 중개하는 서비스입니다.
+    📢 저희 'OhPick'은 우리만의 오피스 공간이 필요하신 분들을 위해 개인이 가진 공간을 오피스 공간으로 공유, 대여할 수 있도록 중개하는 서비스입니다.
     
     개인 작업실부터 큰 규모의 팀 공간까지 다양한 유형의 오피스 정보를 제공해 드립니다. 
     간편한 지역 검색 및 필터링 기능으로 원하는 조건에 맞는 오피스를 손쉽게 찾을 수 있을 뿐만 아니라
