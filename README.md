@@ -1,7 +1,6 @@
-# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) Project 소개
+# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) PROJECT 소개
 <br>
-![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/431fe537-fb2b-4583-85d9-7b7ce990d0fd)
-
+![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/cfc3c265-097b-44e4-85bf-d4250a1c1d47)
 
 > ✨ STACK : `React` `Spring` <br>
 >
