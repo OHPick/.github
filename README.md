@@ -1,4 +1,4 @@
-# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/ba212f9d-1bda-44a2-853b-890b806ba13d) 프로젝트 소개
+# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 프로젝트 소개
 <br>
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/aae14924-4528-4e0c-b1b7-524d75168549)
 
