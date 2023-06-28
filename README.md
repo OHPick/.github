@@ -2,11 +2,11 @@
 
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/cfc3c265-097b-44e4-85bf-d4250a1c1d47)
 
-> ✨ STACK : `React` `Spring` <br>
->
-> ➡️ URL : https://ohpick.shop/
+> ✨ 기술 스택 : `React` `Spring` <br>
 > 
 > 🚩 개발 기간 : 2023.05.23 ~ 2023.06.29 <br>
+>
+> ➡️ URL : https://ohpick.shop/
 
 <br>
 
