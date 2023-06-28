@@ -1,4 +1,5 @@
-# ![오픽](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/005e2564-5fef-4e80-994b-f2640ca77c7a) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/56e66727-a99c-4808-b2d9-3c81071a720f) 프로젝트 소개 💜 
+# ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1)
+ ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 프로젝트 소개 💜 
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/aae14924-4528-4e0c-b1b7-524d75168549)
 
 > ✨ 주특기 : `React``Spring`
@@ -8,7 +9,8 @@
 
 
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/56e66727-a99c-4808-b2d9-3c81071a720f) 서비스 소개 <br>
+## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1)
+ ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 서비스 소개 <br>
 
 ```
 📢 저희 'OhPick'은 우리만의 오피스 공간이 필요하신 분들을 위해 개인이 가진 공간을 오피스 공간으로 공유, 대여할 수 있도록 중개하는 서비스입니다.
@@ -23,7 +25,8 @@
 
 <br>
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/56e66727-a99c-4808-b2d9-3c81071a720f) 아키텍처 구성도 <br>
+## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1)
+ ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 아키텍처 구성도 <br>
 
 ![아키텍처 구성도](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/13250ebe-c18e-4b8e-a9bd-30b91f8f2eab)
 
@@ -32,7 +35,8 @@
 
 <br>
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/56e66727-a99c-4808-b2d9-3c81071a720f) 주요 기능 <br>
+## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1)
+ ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 주요 기능 <br>
 
 
 <details>
