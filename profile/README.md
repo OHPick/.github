@@ -51,7 +51,7 @@
   
 </details>
 <details>
-  <summary> 3️⃣ 키워드 / 지역 별 검색 및 로그인, 회원가입 기능 </summary>
+  <summary> 3️⃣ 키워드 / 지역 별 검색 및 로그인, 회원가입 기능 </summary> 
   
 </details>
 <details>
