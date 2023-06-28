@@ -24,8 +24,7 @@
         간편 예약 서비스까지 제공하여 고객이 원하는 날짜에 빠른 예약이 가능하도록 설계하였습니다.
 
 
-
-
+<br>
 
 <br>
 
@@ -34,9 +33,10 @@
 ![아키텍처 구성도](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/13250ebe-c18e-4b8e-a9bd-30b91f8f2eab)
 
 
-
+<br>
 
 <br>
+
 
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 주요 기능 <br>
 
@@ -58,8 +58,15 @@
   
 </details>
 
+<br>
 
-<hr />
+<br>
+
+
+
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 기술적 의사 결정 <br>
+
+
 
 
 
