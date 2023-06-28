@@ -1,4 +1,4 @@
-# ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 프로젝트 소개 💜 
+# ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/41701308-8bb6-46fb-b7c3-f8c3d853ac82) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/9d235ca3-9ec3-4c08-986c-fdf8833963a7) 프로젝트 소개
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/aae14924-4528-4e0c-b1b7-524d75168549)
 
 > ✨ 주특기 : `React``Spring`
@@ -8,7 +8,7 @@
 
 
 
-## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 서비스 소개 <br>
+## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/41701308-8bb6-46fb-b7c3-f8c3d853ac82) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/9d235ca3-9ec3-4c08-986c-fdf8833963a7) 서비스 소개 <br>
 
 ```
 📢 저희 'OhPick'은 우리만의 오피스 공간이 필요하신 분들을 위해 개인이 가진 공간을 오피스 공간으로 공유, 대여할 수 있도록 중개하는 서비스입니다.
@@ -23,7 +23,7 @@
 
 <br>
 
-## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 아키텍처 구성도 <br>
+## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/41701308-8bb6-46fb-b7c3-f8c3d853ac82) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/9d235ca3-9ec3-4c08-986c-fdf8833963a7) 아키텍처 구성도 <br>
 
 ![아키텍처 구성도](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/13250ebe-c18e-4b8e-a9bd-30b91f8f2eab)
 
@@ -32,7 +32,7 @@
 
 <br>
 
-## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/efcd95d1-978a-4aba-aa85-3f84774499e1) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/336ad4c1-3071-4211-b37d-eb16493c1d70) 주요 기능 <br>
+## ![오픽 시계](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/41701308-8bb6-46fb-b7c3-f8c3d853ac82) ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/9d235ca3-9ec3-4c08-986c-fdf8833963a7) 주요 기능 <br>
 
 
 <details>
