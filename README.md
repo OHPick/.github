@@ -12,7 +12,7 @@
 
 <br>
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 서비스 소개 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 서비스 소개 💁‍♀️<br>
 
 
     📢  저희 'OhPick'은 우리만의 오피스 공간이 필요하신 분들을 위해 개인이 가진 공간을 오피스 공간으로 
@@ -27,7 +27,7 @@
 
 <br>
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 아키텍처 구성도 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 아키텍처 구성도 🏗️<br>
 
 ![아키텍처 구성도](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/13250ebe-c18e-4b8e-a9bd-30b91f8f2eab)
 
@@ -37,7 +37,7 @@
 <br>
 
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 주요 기능 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 주요 기능 ⚡<br>
 
 
 <details>
@@ -63,7 +63,7 @@
 
 
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 기술적 의사 결정 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 기술적 의사 결정 🌻<br>
 
 ### 👥 FRONT-END
 
@@ -188,7 +188,7 @@
 
 <br>
   
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 트러블 슈팅 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 트러블 슈팅 🔥<br>
 
 ### 👥 FRONT-END
 
@@ -458,7 +458,7 @@ List<ChatMessage> messages = chatMessageRepository.findAllByRoomOrderByIdAsc(roo
 
 <br>
   
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 유저 테스트 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 유저 테스트 🧑🏻‍💻<br>
 
 ### 🌱 39명의 유저에게 총 83건의 테스트 피드백을 얻었습니다.
 
@@ -514,7 +514,7 @@ List<ChatMessage> messages = chatMessageRepository.findAllByRoomOrderByIdAsc(roo
 
 <br>
   
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 성능 개선 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 성능 개선 ♻️<br>
 
 ### 👥 FRONT-END
 
@@ -750,5 +750,18 @@ light-house에서 제시하는 경고를 확인하고, 웹 접근성에서 추�
 
 <br>
   
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 👨‍👩‍👧‍👦 팀원 소개 & 팀원 역할 <br>
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 팀원 소개 & 팀원 역할 👨‍👩‍👧‍👦 <br>
+<br>
+
+| **역할** | **이름** | **담당** | **Github** | **E-mail** |
+| --- | --- | --- | --- | --- |
+| FE ⭐<br> `Leader` | 이준영 | 로그인(일반) <br> 소셜 로그인(카카오) <br> 인트로페이지 <br> 메인페이지 <br>  글작성 페이지 <br> 검색 기능 <br> 필터(정렬, 지역) <br> 지도 API <br> 위치 검색, 페이지네이션 <br> 무한스크롤 <br> 채팅, 멀티 이미지| https://github.com/junvely | junvely97@gmail.com |
+| FE | 왕정민 | <br> 상세 페이지 <br> 예약 및 예약 확인 페이지 <br> 글 작성 페이지(멀티이미지 업로드) <br> 글 수정 페이지 <br> 마이페이지 <br> 채팅 목록 및 채팅 룸 <br> 이메일 인증 <br> 회원가입 | https://github.com/v-va | poruch0915@gmail.com |
+| BE ⭐<br>  `Vice Leader` | 박우현 | <br> 서버 배포(AWS, EC2, CI/CD, Git Action) <br> 채팅 (STOMP 웹소켓) <br> 예약 시스템 <br> 예외처리 <br> jwt 리프레쉬 토큰 쿠키  <br> route 53 https <br> 탄력IP <br> 이메일 인증 <br> Statement Inspector를 사용한 요청 쿼리 개수 및 총 요청 시간 파악 <br> 스프링 스케쥴러 | https://github.com/JoshWPark | parkjoshua98@gmail.com |
+| BE | 마동찬 | <br> 게시글 CRUD <br> 좋아요 <br> S3이미지  <br> 카카오로그인  <br> 채팅(STOMP 웹소켓) <br> 마이페이지내 목록조회 | https://github.com/mdc2684 | mdc53@naver.com |
+| BE | 강준수 | <br> 회원가입, 로그인, 로그아웃, 회원탈퇴 <br> Swagger <br> Redis <br> 메인페이지 필터링, 페이지네이션 | https://github.com/Kangjunesu | kulbit92@naver.com |
+| Designer | 김민선 | 디자인 담당 |  |  |
+
+
+
 
