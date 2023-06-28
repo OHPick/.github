@@ -1,18 +1,19 @@
-# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/2b2a6c09-3ec8-482f-8935-83a40fba4444)  PROJECT 소개
+#  ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231)  PROJECT 소개 🎉
 
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/cfc3c265-097b-44e4-85bf-d4250a1c1d47)
 
-> ✨ 기술 스택 : `React` `Spring` <br>
-> 
-> 🚩 개발 기간 : 2023.05.23 ~ 2023.06.29 <br>
->
-> ➡️ URL : https://ohpick.shop/
+
+|  ✨ **기술 스택**  | `React` `Spring` |
+| --- | :--- |  
+|  🚩 **개발 기간**  | 2023.05.23 ~ 2023.06.29 | 
+| ➡️ **URL**  |  https://ohpick.shop/ | 
 
 <br>
 
 <br>
 
-## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 서비스 소개 💁‍♀️<br>
+##  ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 서비스 소개 💁‍♀️<br>
+![KakaoTalk_20230620_001046503_01](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/e32b365a-6b10-4459-8685-272cb59dba12)
 
 
     📢  저희 'OhPick'은 우리만의 오피스 공간이 필요하신 분들을 위해 개인이 가진 공간을 오피스 공간으로 
@@ -223,7 +224,7 @@
 3. 간혹 연속으로 잦은 검색 시 로딩 스피너만 계속해서 돌아가는 등의 문제가  발생
 ![Untitled (22)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/eaa3dc9f-b001-4a4c-b07b-446aa1ed7cf3)
 
-2안일 경우 옵션 함수로 상태를 관리 해 주기 때문에 위의 모든 문제에 대해 자유로웠습니다. 하지만 useInfiniteQuery 자체적으로 초기 데이터 통신이 2번 더 발생하는 문제가 있었습니다.
+2안일 경우 옵션 함수로 상태를 관리 해 주기 때문에 위의 모든 문제에 대해 자유로웠습니다. 하지만 useInfiniteQuery 자체적으로 초기 데이터 통신이 2번 더 발생하는 문제가 있었습니다.<br> 
 ![Untitled (23)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/c2dc7391-0ce9-4a7c-af32-7a9a4ca7a468)
 
 `의견 결정`
@@ -545,7 +546,8 @@ List<ChatMessage> messages = chatMessageRepository.findAllByRoomOrderByIdAsc(roo
 1. refresh-token은 Https only 쿠키에서 관리하여 브라우저에서의 접근을 막고, 클라이언트 쪽의 접근/노출/공격을 방지하였습니다.
 2. access-token은 클라이언트 저장소에 저장하지 않기 때문에 토큰이 브라우저 쿠키 또는 로컬 스토리지 등에 노출되는 위험을 줄일 수 있었습니다. 또 클라이언트 저장소에 토큰을 저장하는 경우, 악의적인 사용자가 저장된 토큰을 탈취하여 인증을 우회 할 수 있는 위험이 있을 수 있으므로 저장소에 토큰을 저장하지 않음으로서 위험성을 줄일 수 있었습니다.
     
-![Uploading Untitled (8).png…]()
+![Untitled (24)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/32f3123f-a93e-4792-a04e-e73b0dd8faaa)
+
 
     
 3. access-token은 클라이언트 저장소에 저장하지 않기 때문에 토큰이 브라우저 쿠키 또는 로컬 스토리지 등에 노출되는 위험을 줄일 수 있었습니다. 또 클라이언트 저장소에 토큰을 저장하는 경우, 악의적인 사용자가 저장된 토큰을 탈취하여 인증을 우회 할 수 있는 위험이 있을 수 있으므로 저장소에 토큰을 저장하지 않음으로서 위험성을 줄일 수 있었습니다.
@@ -757,10 +759,10 @@ light-house에서 제시하는 경고를 확인하고, 웹 접근성에서 추�
 | **역할** | **이름** | **담당** | **Github** | **E-mail** |
 | --- | --- | --- | --- | --- |
 | FE ⭐<br> `Leader` | 이준영 | 로그인(일반) <br> 소셜 로그인(카카오) <br> 인트로페이지 <br> 메인페이지 <br>  글작성 페이지 <br> 검색 기능 <br> 필터(정렬, 지역) <br> 지도 API <br> 위치 검색, 페이지네이션 <br> 무한스크롤 <br> 채팅, 멀티 이미지| https://github.com/junvely | junvely97@gmail.com |
-| FE | 왕정민 | <br> 상세 페이지 <br> 예약 및 예약 확인 페이지 <br> 글 작성 페이지(멀티이미지 업로드) <br> 글 수정 페이지 <br> 마이페이지 <br> 채팅 목록 및 채팅 룸 <br> 이메일 인증 <br> 회원가입 | https://github.com/v-va | poruch0915@gmail.com |
-| BE ⭐<br>  `Vice Leader` | 박우현 | <br> 서버 배포(AWS, EC2, CI/CD, Git Action) <br> 채팅 (STOMP 웹소켓) <br> 예약 시스템 <br> 예외처리 <br> jwt 리프레쉬 토큰 쿠키  <br> route 53 https <br> 탄력IP <br> 이메일 인증 <br> Statement Inspector를 사용한 요청 쿼리 개수 및 총 요청 시간 파악 <br> 스프링 스케쥴러 | https://github.com/JoshWPark | parkjoshua98@gmail.com |
-| BE | 마동찬 | <br> 게시글 CRUD <br> 좋아요 <br> S3이미지  <br> 카카오로그인  <br> 채팅(STOMP 웹소켓) <br> 마이페이지내 목록조회 | https://github.com/mdc2684 | mdc53@naver.com |
-| BE | 강준수 | <br> 회원가입, 로그인, 로그아웃, 회원탈퇴 <br> Swagger <br> Redis <br> 메인페이지 필터링, 페이지네이션 | https://github.com/Kangjunesu | kulbit92@naver.com |
+| FE | 왕정민 | 상세 페이지 <br> 예약 및 예약 확인 페이지 <br> 글 작성 페이지(멀티이미지 업로드) <br> 글 수정 페이지 <br> 마이페이지 <br> 채팅 목록 및 채팅 룸 <br> 이메일 인증 <br> 회원가입 | https://github.com/v-va | poruch0915@gmail.com |
+| BE ⭐<br>  `Vice Leader` | 박우현 |서버 배포(AWS, EC2, CI/CD, Git Action) <br> 채팅 (STOMP 웹소켓) <br> 예약 시스템 <br> 예외처리 <br> jwt 리프레쉬 토큰 쿠키  <br> route 53 https <br> 탄력IP <br> 이메일 인증 <br> Statement Inspector를 사용한 요청 쿼리 개수 및 총 요청 시간 파악 <br> 스프링 스케쥴러 | https://github.com/JoshWPark | parkjoshua98@gmail.com |
+| BE | 마동찬 |게시글 CRUD <br> 좋아요 <br> S3이미지  <br> 카카오로그인  <br> 채팅(STOMP 웹소켓) <br> 마이페이지내 목록조회 | https://github.com/mdc2684 | mdc53@naver.com |
+| BE | 강준수 |회원가입, 로그인, 로그아웃, 회원탈퇴 <br> Swagger <br> Redis <br> 메인페이지 필터링, 페이지네이션 | https://github.com/Kangjunesu | kulbit92@naver.com |
 | Designer | 김민선 | 디자인 담당 |  |  |
 
 
