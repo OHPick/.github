@@ -215,16 +215,15 @@
 
 1. 추가 구현이 필요 하다 : Intersection Observer API는 교차 여부를 감지하는 기능만 제공하므로 데이터 페칭 및 상태 관리와 관련된 로직은 직접 구현해야 함.
 2. 이렇게 무한 스크롤 페이지 및 데이터 상태를 직접 관리하다 보니 검색 상태와 더해져, 상태 관리에 의한 잦은 렌더링으로 성능의 문제 우려됨. 테스트 결과 0~ 6페이지 스크롤까지 평균 20번씩의 렌더링, 검색시에는 최고 40번까지 발생하는 경우도 있었음
-    
-    ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/47c248df-cd50-4df9-b4c8-050b3b4ff844/Untitled.png)
+
+![Untitled (21)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/9816651b-d629-43cb-b75d-7db607cfb766)
+
     
 3. 간혹 연속으로 잦은 검색 시 로딩 스피너만 계속해서 돌아가는 등의 문제가  발생
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/77569a0e-35db-46fd-aa4a-8336e0a3da1c/Untitled.png)
+![Untitled (22)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/eaa3dc9f-b001-4a4c-b07b-446aa1ed7cf3)
 
 2안일 경우 옵션 함수로 상태를 관리 해 주기 때문에 위의 모든 문제에 대해 자유로웠습니다. 하지만 useInfiniteQuery 자체적으로 초기 데이터 통신이 2번 더 발생하는 문제가 있었습니다.
-
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1faf9c2b-9ace-4748-867b-91fe7057a107/Untitled.png)
+![Untitled (23)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/c2dc7391-0ce9-4a7c-af32-7a9a4ca7a468)
 
 `의견 결정`
 
@@ -327,8 +326,304 @@ usEffect를 사용하여 앱이 처음 mount 시 로그인 여부를 업데이�
 
 </details>
 
+<br>
+  
+### 👥 BACK-END
+
+<details>
+  <summary> <b>채팅 메세지가 올바르지 않게 불러오는 에러</b> </summary>
+    
+<br>
+
+`문제 상황` 
+
+기존 데이터베이스에 저장된 채팅 메시지를 가져올 때, 보내진 순서대로 가져오지 않는 오류가 발생하였습니다.  이를 확인 해보니, 저장된 메세지들을 생성 시간 순으로 가져왔는데, 채팅 메세지 생성 시간을 분 단위로 설정해두어서, 같은 시간 (분 단위) 에 채팅 메세지가 전송이 될 시, 해당 메세지들을 불러 올 때, 무작위로 섞여서 가져오고 있었습니다. 
+
+`해결 방안` 
+
+1안: 채팅 메세지의 생성 시간을 초 단위로 설정 
+
+2안: 채팅 메세지들을 pk값 기준으로 가져오는 방식을 교체
+
+`의견 조율` 
+
+1안을 선택 시, 채팅 메세지의 생성 시간이 초 단위로 저장이 되는데, 이때 기존에 채팅 메세지의 시간을 보여주는 형식을 바꿔야 하는 상황이 발생됩니다.  또한, 채팅 생성 시간이 초 단위로 되면, 위와 같은 똑같은 에러가 발생 할 수 있는 경우가 생깁니다. 
+
+만약 2안을 선택 할 시에, 기존의 메세지들을 어떠한 방식으로 가져오는 것이 중요하였습니다. 메세지를 보낸 순서 대로 불러 와져야 했기에 채팅 메세지가 데이터 베이스에 저장 될 때, 자동으로 생성되는 pk 값을 이용해 데이터를 가져오면 이 문제를 해결할 수 있었습니다.   
+
+`의견 결정`
+
+1안은 기존에 이미 저장된 메세지들의 생성 시간도 변경이 되었어야 했고, 생성 시간을 보여주는 형식도 바꿔야 했으며, 똑같은 문제에 맞닥뜨릴 수 있기 때문에 2안으로 결정하였습니다.    
+
+```
+List<ChatMessage> messages = chatMessageRepository.findAllByRoomOrderByIdAsc(room)
+```
 
 <br>
+
+</details>
+
+
+<details>
+  <summary> <b>예약 종료 상태 관련 이슈</b> </summary>
+    
+<br>
+    
+`문제 상황` 
+
+저희 서비스에서 사용자가 한 게시글에 예약 일자를 정해서 예약을 하는 경우, 현재 날짜를 기준으로 해당 예약의 예약 종료 일이 지나면 예약 상태가 종료 상태로 변경되어야 했습니다. 하지만 예약 상태를 종료 상태로 바꿔 주는 방법을 구현하지 못 한 상황 이여서 문제가 발생하였습니다. 이로 인해, 예약 종료 일이 지난 예약 현황도 게시글의 예약 현황 리스트에 추가가 되어 반환이 되고 있었습니다.     
+
+`해결 방안` 
+
+1안:  게시글의 예약 현황 리스트 api 요청이 올 때 마다, 해당 게시글의 각각의 예약 현황의 종료 일들을 현재 날짜와 비교하는 방법을 사용
+
+2안: 지정해둔 시간에 모든 예약 현황의 예약 종료 일을 현재 날짜와 비교할 수 있는 스프링 스케쥴러를 사용
+
+`의견 조율` 
+
+1안을 선택 시, 해당 게시글의 예약 현황만 비교하여 비교 대상자가 많이 줄어들지만, 해당 요청에서 의 반환 속도가 늦어 질 수 있습니다. 또한, 다른 게시글의 예약 현황 상태를 안 바꾸어준다는 단점이 있어서 사용자의 예약 현황들을 조회 할 때, 예약 종료일이 지난 예약 현황들도 가져오는 오류가 발생 할 수 있었습니다. 
+
+만약 2안을 선택 시, 한번에 모든 예약 현황의 상태를 바꿀 수 있지만, 지정된 시간에 이루어 지기에, 이 시간에 새로운 요청이 들어 올 시, 에러가 발생 할 경우도 있었습니다. 
+
+`의견 결정`
+
+예약 기능은 저희 서비스의 주요 기능 중 하나 이기 때문에 다른 api 요청에서도 예약 현황이 사용되어서 만약 예약 종료 일이 지나도 예약 상태가 종료 상태로 안 바뀌어져 있으면 오류가 발생 할 수 있습니다. 이로 인해, 스프링 스켸쥴러를 사용하여 모든 예약 현황의 상태를 변경하는 것으로 정하였습니다. 스프링 스켸쥴러의 작동 시간은 하루가 거의 끝나는 시간으로 지정하여 만약 새로운 예약 요청의 예약 종료일이 당일이 되는 경우를 최대한 줄여서 적용하였습니다.
+
+<br>
+
+</details>
+
+<details>
+  <summary> <b>회원 탈퇴 시 연관된 테이블에 의해 삭제가 안되는 문제</b> </summary>
+    
+<br>
+    
+`문제 상황` 
+
+회원 탈퇴 요청 시 “Cannot delete or update a parent row: a foreign key constraint fails” 이라는 에러 메세지가 나오며 DB에서 삭제가 안되는 문제가 발생하였습니다. 삭제하려는 Member 객체를 확인해보니, Post Entity에서 @ManyToOne형식으로 Member Entity와 연관 관계를 가지고 있었고 Member의 id를 FK로 설정되어 있어서 외래 키 제약 조건에 의한 문제임을 알았습니다.
+
+`해결 방안` 
+
+1안: cascade = CascadeType.REMOVE, orphanRemoval = true를 이용해서 데이터베이스에서 삭제하는 방식으로 물리 삭제 (hard delete) 를 사용
+
+2안: 데이터베이스에 데이터를 남겨두고 삭제되었는지 아닌 지를 구분하는 구분자를 추가하여 사용자들에게 보이지 않게 논리 삭제(soft delete)를 사용
+
+`의견 조율` 
+
+데이터 베이스의 데이터의 삭제 방식을 hard delete 로 선택할 경우, 데이터를 조회 할 때, where 절을 따로 추가 해줄 필요가 없어서,  조회 속도가 빠르고 데이터베이스의 용량이 매우 커지는 것을 방지 할 수 있습니다. 하지만 이 방식은 데이터의 복구가 불가 하다는 단점이 있습니다. 예를 들어, 사용자가 실수로 데이터를 지웠을 때, 복구 하는 방법이 없습니다.
+만약 삭제 방식을 soft delete로 선택 할 경우, hard delete 방식과는 반대로, 데이터의 복구가 가능 하며, update 쿼리가 delete 쿼리 보다  마이크로 초 단위로 더 빠릅니다. 하지만, 구분자가 추가 되어서 조회 속도가 조금 더 느려지고, 데이터베이스의 용량이 계속해서 커지는 단점들이 있습니다.
+
+`의견 결정`
+
+추후 서비스 성능 개선 할 때, 실수로 삭제 했던 게시글이나, 탈퇴를 한 회원이 재 로그인을 시도 할 때 새로운 계정을 만들 필요 없이 기존 계정에 로그인이 가능한 기능을 추가 하려기에, soft delete형식을 선택 하였습니다. 이로 인해, entity 에 is_delete 라는 boolean 필드를 구분자로 추가하고, 디폴트값을 false로 지정하고, 삭제 시 true로 바뀌도록 변경하였습니다. 하지만 현재 서비스 상태로는 복구 기능이 없기 때문에 탈퇴 후 동일한 이메일이나 닉네임을 가지고 가입할 경우가 생길 수 있어서 탈퇴 할 때, 이메일과 닉네임에 지정한 문자열을 붙여서 데이터베이스에 수정되도록 하여 중복으로 기입 되어지는 상황을 방지 하였습니다.
+
+<br>
+
+</details>
+
+<details>
+  <summary> <b>카카오 회원 로그인 에러 이슈 </b> </summary>
+    
+<br>
+    
+`문제 상황` 
+
+카카오 소셜 로그인에서, 카카오 사용자의 이메일을 선택 사항으로 받고 있었습니다. 저희 서비스는 사용자의 이메일을 사용하여 jwt 토큰을 만들어서 클라이언트에게 넘기는데, 이때 사용자가 선택 사항인 이메일 정보 공유에 동의를 안 하고 회원 가입을 할 시에, 이메일 값이 null 값이 되면서 로그인 후 무한 로딩이 되는 오류가 발생하였습니다. 
+
+`해결 방안` 
+
+1안: 이메일 공유에 미 동의 하였을 시, 이메일 값을 따로 받기.
+
+2안: kakao developer 에서 이메일 정보를 필수 사항으로 바꾸기.
+
+`의견 조율` 
+
+1안을 사용 할 시, 양쪽 프론트 엔드와 백 엔드에 추가 작업이 필요하였습니다. 또한, 사용자에게 추가 정보를 받아 와야해서 사용자가 불편함을 느낄 수 있었습니다.
+
+2안을 사용할 경우, kakao developers 에서 앱을 비즈 앱으로 등록해줘야 했습니다. 
+
+`의견 결정`
+
+1안을 선택 해서 프론트 엔드, 백 엔드 양쪽에서 추가 작업을 하는 것과 사용자에게 추가 정보를 받는 것은 비효율 적인 방법이라 생각되어 2안을 선택하였습니다. Kakao Developers에서 등록된 앱을 비즈앱으로 전환하여서 이메일 정보를 필수 사항으로 받게 수정하였습니다.
+
+<br>
+
+</details>
+
+
+
+
+<br>
+  
+
+<br>
+  
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 유저 테스트 <br>
+
+### 🌱 39명의 유저에게 총 83건의 테스트 피드백을 얻었습니다.
+
+<details>
+  <summary> <b>유저테스트 결과</b> </summary>
+    
+<br>
+
+![Untitled (1)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/24a0ae8c-a437-4d5d-b160-2d3c1718d577)
+![Untitled (2)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/d6d72001-31b3-4f59-befc-a2836d622550)
+
+<br>
+
+</details>
+
+<details>
+  <summary> <b>유저테스트 피드백</b> </summary>
+    
+<br>
+
+![Untitled (3)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/37b8c9fe-eb7e-4181-9172-acee3733e401)
+![Untitled (4)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/48292a40-cbd7-4e74-8c59-5bd6f75712a7)
+
+<br>
+
+</details>
+
+<details>
+  <summary> <b>유저테스트 피드백 반영 결과</b> </summary>
+    
+<br>
+
+![Untitled (5)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/101d2984-efbf-4d88-a83e-670b605536d1)
+
+<br>
+
+</details>
+
+<details>
+  <summary> <b>유저테스트 주요 반영 사항</b> </summary>
+    
+<br>
+
+![Untitled (6)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/8b538e4f-7dd7-41d9-aeb4-7dba4237a15c)
+
+
+<br>
+
+</details>
+
+<br>
+  
+
+<br>
+  
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 성능 개선 <br>
+
+### 👥 FRONT-END
+
+<details>
+  <summary> <b>로그인 보안 강화 - 토큰을 클라이언트에서 관리 X</b> </summary>
+    
+<br>
+
+`개선 전`
+
+유저 피드백에서 `HttpOnly, Secure가 안되어있기 때문에 보안에 취약할 수 있습니다. url에다 javascript: alert(document.cookie); 치면 쿠키가 나옵니다.` 라는 피드백이 있었습니다. 기존에는 access-token과 refresh-token을 모두 cookie에 저장하여 관리하고, 모든 요청의 헤더에 토큰을 모두 보내는 방식을 사용했었습니다. 하지만 이 방식이 보안적으로 다음과 같은 문제들이 있다고 판단하였습니다.
+
+1. 브라우저에서 자바스크립트 문법으로 토큰에 접근 가능(document.cookie)/노출 되는 문제
+2. 헤더 탈취 시 access, refresh 모두 탈취 가능성
+3. XSS(악의적인 자바스크립트 삽입) 공격에 취약
+
+![Untitled (7)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/590ba964-815f-45fe-9c2d-9f40afe68a67)
+
+
+`해결 방법`
+
+1. refresh-token은 Https only 쿠키에서 관리
+2. access-token은 브라우저 저장소에서 관리하는 자체 만으로도 보안적으로 탈취/노출 위험성이 존재하기 때문에, 브라우저 저장소에 저장하지 않고 axios의 defaults변수에 담아 요청 시 헤더에 담아 전송
+
+`개선 후 결과`
+
+1. refresh-token은 Https only 쿠키에서 관리하여 브라우저에서의 접근을 막고, 클라이언트 쪽의 접근/노출/공격을 방지하였습니다.
+2. access-token은 클라이언트 저장소에 저장하지 않기 때문에 토큰이 브라우저 쿠키 또는 로컬 스토리지 등에 노출되는 위험을 줄일 수 있었습니다. 또 클라이언트 저장소에 토큰을 저장하는 경우, 악의적인 사용자가 저장된 토큰을 탈취하여 인증을 우회 할 수 있는 위험이 있을 수 있으므로 저장소에 토큰을 저장하지 않음으로서 위험성을 줄일 수 있었습니다.
+    
+![Uploading Untitled (8).png…]()
+
+    
+3. access-token은 클라이언트 저장소에 저장하지 않기 때문에 토큰이 브라우저 쿠키 또는 로컬 스토리지 등에 노출되는 위험을 줄일 수 있었습니다. 또 클라이언트 저장소에 토큰을 저장하는 경우, 악의적인 사용자가 저장된 토큰을 탈취하여 인증을 우회 할 수 있는 위험이 있을 수 있으므로 저장소에 토큰을 저장하지 않음으로서 위험성을 줄일 수 있었습니다.
+
+
+<br>
+
+</details>
+
+
+<details>
+  <summary> <b>Lazy Loading 지연 로딩</b> </summary>
+    
+<br>
+
+`개선 전`
+ 
+많은 오피스 사진과 데이터들을 사용자에게 제공하다 보니, 이미지 리소스가 많을 수록 페이지가 로딩 되는 속도가 증가하고, 깜빡이는 문제를 해결해야 했습니다. 원인을 분석해 보니 페이지를 읽어올 당시에 화면 상에 나타나지 않는 리소스들까지 너무 많은 리소스를 로드하고 있다는 것을 깨달았습니다. 따라서 페이지 당 게시물 개수를 20개에서 → 10개로 줄였지만, 그럼에도 불구하고 화면상에 보이지 않는 리소스까지 로드하기 때문에 초기 페이지 로딩 시간이 증가하고 웹 성능적으로도 좋지 않은 점수가 나왔습니다. → 성능 점수 77점
+
+
+![lazy 전.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c83b0b73-84df-4c31-99f3-6b75a3336998/lazy_%EC%A0%84.gif)
+
+![lazy전 성능.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/20db9824-a929-4331-9911-f0a56c6511fc/lazy%EC%A0%84_%EC%84%B1%EB%8A%A5.gif)
+
+
+ `해결 방법`
+ 
+lazy-load(지연 로딩)을 사용하여 현재 화면 상 사용자에게 보여지지 않는 이미지나 비디오 등 리소스들의 로딩을 지연시켜 초기 페이지 로딩 시간을 감소시키고, 리소스를 최적화하였습니다.
+
+ `개선 후 결과`
+ 
+**페이지 로딩 시간 감소** : 리소스 로딩을 지연시킴으로써 초기 페이지 로드 시간을 줄였습니다.
+     - FCP(초기 로딩 속도) 0.8초 → 0.5초로 개선
+     - LCP(큰 콘텐츠 로딩 속도) 1.57초 → 0.87초로 개선
+     - CLS(레이아웃 변동) 0.0206 → 0.00895로 개선
+     - 즉 페이지의 초기 로딩 속도, 큰 콘텐츠의 로딩 시간, 레이아웃 변동과 관련된 성능 지표 모두에서 개선 된 것을 확인할 수 있었습니다.
+ **리소스 사용 최적화** : 리소스를 지연 로드하여 사용자 리소스(사용자의 배터리, 시간, 시스템 리소스)와 시스템 리소스 사용을 최적화 하였습니다. light house 성능 점수 77점 → 87점으로 향상된 것을 확인하였습니다.
+ 
+![lazy후.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71e0e45f-7646-45c6-a0ef-edb45674c2b9/lazy%ED%9B%84.gif)
+![Untitled (9)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/48c75cb3-2cbe-4cef-b5ec-51acaa881ef5)
+![Untitled (10)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/c15e2d63-7cbc-4e15-b911-92c054536628)
+
+
+
+<br>
+
+</details>
+
+
+<details>
+  <summary> <b>light-house 웹 접근성, SEO 최적화 100점</b> </summary>
+    
+<br>
+ `개선 전`
+ 
+웹 접근성에 좋지 않은 태그 요소가 포함되어있거나, 중복되는 id값이 존재, 검색 엔진이 읽을 수 있는 robots.text의 누락 등 웹 접근성과 검색 엔진 점수가 각각 92, 91 점으로 조금 미흡한 부분이 있었습니다.
+ 
+ ![lazy전 성능.gif](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/31c44eab-25b5-453d-86da-4288eb5d4e69/lazy%EC%A0%84_%EC%84%B1%EB%8A%A5.gif)
+ 
+
+ `해결 방법`
+ 
+light-house에서 제시하는 경고를 확인하고, 웹 접근성에서 추구하는 방향으로 태그 요소를 개선하였습니다. 불필요한 태그나 중복 id등은 제거하고, 누락된 robots.txt 파일을 추가하는 등 웹 접근성과 검색 엔진 기능을 향상 시켰습니다.
+ 
+
+ `개선 후 결과`
+ 
+ 웹 접근성과 SEO 점수가 100점으로 향상되었습니다.
+
+ ![웹 접근성, 검색엔진 최적화](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/45ba58a8-300d-4056-8ee4-0d2b502d728b)
+
+
+<br>
+
+</details>
+
+
+<br>
+
   
 ### 👥 BACK-END
 
@@ -342,118 +637,32 @@ usEffect를 사용하여 앱이 처음 mount 시 로그인 여부를 업데이�
  
  JWT 액세스 토큰, 리프레시 토큰을 클라이언트에 보낼 때, response.addHeader 방식으로 보내고 있었는데, 이렇게 하니, 개발자 도구에서 document.cookie 를 하면, 토큰 값이 노출 되었습니다. 이로 인해, 보안 측에 문제가 있었습니다. 
  
- ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/59bea0b1-93ec-426d-8ef4-ec4cac3de427/Untitled.png)
- 
- ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/17657bec-b981-4cd5-bb51-6839436c4f94/Untitled.png)
+![Untitled (11)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/581b8ebc-eac3-4a89-b9d2-79b14d4a9989)
+![Untitled (12)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/8bb5bc21-b56e-4d20-8bbc-d5a694bcb5e9)
+
  
  `해결 방법`
  
  
  쿠키에 httpOnly 와 secure 가 적용되면 http 요청일 때만 쿠키 값이 접근이 되어서 document.cookie로 접근이 불가 합니다. 이를 통해 개선 전 문제가 해결되지만 액세스 토큰과 리프레시 토큰 전부를 쿠키로 전송하는 것은 CSRF 공격에 취약하기 때문에, 액세스 토큰을 재 발급 해주는 용도로만 사용되는 리프레시 토큰만 쿠키로 수정하였습니다. 
  
- ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/a72d48e0-1d24-4086-a374-5dd982825ef5/Untitled.png)
- 
- ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/cb8de8f7-5504-4b2e-9ffe-9b4d6d07072f/Untitled.png)
+![Untitled (13)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/fe4ea58b-559d-451f-8b89-55d7502e797a)
+![Untitled (14)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/6989bd6f-db13-4e00-9438-c249150eb042)
+
  
  그리고, 인증된 사용자인지 확인 해주는 액세스 토큰은 CSRF나 XSS 같은 보안 공격에 대응하기 위하여 클라이언트에서 private 변수 값으로 저장하는 방식을 선택하였습니다. 이를 가능케 할 수 있도록 response의 body 를 통해 전송하는 방식으로 수정하였습니다. 또한 액세스 토큰이 만료 될 때 마다, 쿠키에 담겨진 리프레시 토큰을 사용하여 재발급 해주는 api도 구성하였습니다. 
  
- ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e561f148-c9ae-4199-98c3-cc91666edd93/Untitled.png)
- 
- ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/0b987344-445e-4516-ba0e-da398be49c08/Untitled.png)
+![Untitled (15)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/cf5cb993-fa0a-4547-baa9-bd643ada2f45)
+![Untitled (16)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/1bec6475-785d-42e0-b047-f6dc8d5863c3)
+
  
  `개선 후 결과`
  
  
  변경 사항 적용 후, 사용자가 로그인 요청을 하였을 시, 액세스 토큰이 response의 body 값으로 들어오는 것을 확인 할 수 있었습니다. 또한, 개발자 도구로 document.cookie 를 하였더니, 쿠키로 수정된 리프레시 토큰 및 private 변수로 저장된 액세스 토큰 노출이 안되었습니다.  이로써 보안을 강화하였습니다. 
 
-
-<br>
-
-</details>
-
-<details>
-  <summary> <b>이미지 수정 시 이미지 업로드 방식</b> </summary>
-    
-<br>
-
-`문제 상황` 
-
-저희 서비스에는 멀티 이미지 업로드가 가능한 글쓰기 기능이 개발되어 있었습니다. 글 수정 로직을 신규로 개발함에 있어 시간이 한정적인 상황에서 최대한 효율적인 방법으로 수정 로직을 구현하고자 하였습니다.
-
-`해결 방안` 
-
-1안 : 이미지 수정을 하는 경우와 아닌 경우를 나누어 요청하는 방법
-(유저가 이미지를 바꾸는 경우에만 파일이 업로드 됨)
-
-2안 : 기존 이미지 URL로 파일 객체를 받아와 유저의 동작과 관계 없이 항상 파일을 업로드 하는 방법 (항상 파일이 업로드 됨)
-
-`의견 조율` 
-
-1안을 선택하는 경우,
-
-장점 : 많이 사용하는 방법
-단점 : 업로드 유무만 나누는 것이 아니라 이미지 순서, 삭제 이미지의 정보 등을 추가로 보내야 해서 로직을 새로 짜야함 (개발시간↑ 로직의 재사용성↓)
-
-2안을 선택하는 경우,
-
-장점 : 항상 파일 객체를 보내기 때문에 로직의 수정이 많이 필요치 않음
-(개발시간↓ 로직의 재사용성↑)
-단점 : 동일 이미지의 계속적인 업로드로 서버의 자원 낭비 및 이미지 URL을 이용해 S3 버킷에서 직접 이미지 객체 다운로드 시 CORS 에러 발생
-
-`의견 결정`
-
-시간적 한계와 로직의 재사용성 등을 고려하여 최종적으로 2안을 택하였습니다.
-그리고 2안이 가지고 있는 문제점을 다음과 같이 해결하였습니다.
-
-1. 서버 자원 낭비
-→ 수정 이미지 업로드 시 기존 글의 이미지를 모두 삭제 후 업로드 하는 방식으로 해결
-2. CORS 에러
-→ 브라우저가 로컬 캐시를 사용하고 있어서 CORS에러가 나고 있음을 확인하였고, 이 부분을 해결하기 위해 이미지 URL로 get 요청 시 headers에 no-cache 설정을 추가하여 해결
-
-[ CORS 에러 해결 과정 ]
-
-1. S3 CORS 정책 설정
-→ S3의 경우 요청 헤더에 Origin이 없을 경우 CORS 응답헤더를 전달하지 않음
-2. Origin 헤더를 직접 추가하여 요청
-→ 브라우저가 로컬 캐시를 사용하고 있어 CORS 에러가 지속됨을 확인
-3. 이미지 URL로 get 요청 시 headers에 no-cache 설정을 추가
-
-```
-const config = {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-          'Cache-Control': 'no-cache',
-        },
-        responseType: 'blob',
-      };
-```
-
-<br>
-
-</details>
-
-
-<details>
-  <summary> <b>로그인 상태 유지 - 브라우저에 재 접속 시 Recoil 로그인 전역 상태 초기화 문제</b> </summary>
-    
-<br>
-
-`문제 상황` 
-
-저희 서비스는 사용자의 번거로움을 줄이기 위해 이미 로그인한 사용자라면, 리프레쉬 토큰 만료 전 까지는 브라우저 종료 후 다시 들어와도 로그인 한 상태를 유지해야 합니다. 문제는 Recoil 전역 상태로 토큰을 확인해 로그인 여부를 관리하였는데 브라우저가 실행되면 항상 초기값으로 초기화되기 때문에 Recoil에서 관리하는 로그인 상태의 초기값이 false일 경우 브라우저에서 재 접속 시 초기화 되어 다시 로그인을 해야 하는 상황이 발생했습니다.
-
-`해결 방안` 
-
-1. 앱이 처음 mount 되자마자 useEffect를 사용해 토큰의 여부를 확인하여 로그인 상태를 업데이트 
-2. 로그인 전역 상태의 초기값을 아예 토큰 여부를 확인한 isToken 변수로 설정
-
-`의견 조율` 
-
-usEffect를 사용하여 앱이 처음 mount 시 로그인 여부를 업데이트 시키게 되면, 처음 로드됐을 때 외에 새로고침 등 상태값이 초기화 되는 상황 마다 업데이트가 되도록 따로 설정해주어야 합니다. 상태값이 초기값으로 초기화될 때 아예 토큰 여부를 확인한 결과값으로 초기화되게 하면 초기화 되는 모든 상황에서도 항상 토큰여부를 확인하여 결과값으로 로그인 여부를 파악하고 유지할 수 있다고 판단하였습니다.
-
-`의견 결정`
-
-상태의 초기값을 isToken의 토큰 여부를 확인한 결과값으로 초기화되게 하여 전역 상태를 잃는 모든 상황에서도 로그인 여부를 확인하고 유지할 수 있도록 하였습니다.
+![Untitled (17)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/3c43184b-89e1-460a-9f3d-fd4baf2a9db7)
+![Untitled (18)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/85ae1e2e-0841-4f16-971c-861ce14e3a2a)
 
 
 <br>
@@ -485,9 +694,11 @@ usEffect를 사용하여 앱이 처음 mount 시 로그인 여부를 업데이�
  
  사용자가 인증 코드 입력하여 인증 완료 시 인증된 이메일로 "SETEX" "[email_verifiedkjs3@naver.com](mailto:email_verifiedkjs3@naver.com)" "180" "true"로 설정하고, 데이터가 삭제되도록 설정하였습니다. 
  
- ![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8689cd33-f1d0-4a41-a578-0ad64888c617/Untitled.png)
- 
- 또한 사용자가 로그인 시 Refresh token 저장하도록 하였습니다. 
+![Untitled (19)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/ae040509-db1b-4c50-b063-9bcbd84177ca)
+
+또한 사용자가 로그인 시 Refresh token 저장하도록 하였습니다. 
+
+![Untitled (20)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/527eaf00-d8bb-46d5-9ca2-0e55a730886f)
 
 
 <br>
@@ -495,5 +706,49 @@ usEffect를 사용하여 앱이 처음 mount 시 로그인 여부를 업데이�
 </details>
 
 
+<details>
+  <summary> <b>채팅 방 리스트 불러오기 쿼리 개수 및 시간 줄이기</b> </summary>
+    
+<br>
 
+ `개선 전`
+ 
+ 
+ 채팅 방 리스트를 가져오는 요청을 보냈을 때, 여러 데이터베이스에 필요한 데이터들을 가져와야 하기 때문에 실행 될 때 걸리는 시간이 생각보다 오래 걸렸습니다. 
+
+ ![채팅 방 리스트 불러오기 전](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/352e7ac0-2dc5-4743-b0a2-d819cc1d280a)
+
+
+ `해결 방법`
+ 
+ 
+ 채팅 방 리스트에서 각 채팅 방에 게시글(post)의 제목과 사진을 가져와야 했는데, 이때 post 객체에 1대1 양방향 연관 관계로 연결되어 있던 다른 객체들에게 쿼리문을 각자 보내고 있었어서 post 객체를 조회 할 때 연관된 다른 객체들을  `join` 해서 조회 하도록 변경하였습니다. > 
+
+ ![채팅 방 리스트 불러오기 후 - 조치 1 (1)](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/c64b4c12-bdcc-4f07-a07c-1992a2cec439)
+
+ 이 후, 쿼리의 개수와 시간은 줄었지만 아직 요청 시간이 오래 걸렸습니다. 
+ ![채팅 방 리스트 불러오기 후 - 결과 1](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/71835427-fba4-4da9-a245-6614785c5fbe)
+
+ 채팅 방 리스트를 불러오는 쿼리를 Query Dsl 로 작성하였는데, 이 쿼리문을 수정 하였습니다. 
+ 
+![채팅 방 리스트 불러오기 후 - 조치 2-1](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/37abb0b4-0ef6-47d2-9637-de33e4bed7be)
+![채팅 방 리스트 불러오기 후 - 조치 2-2](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/091f3bf3-5b02-4d8b-9426-4c4dbdfec5a8)
+
+ 
+
+ `개선 후 결과`
+채팅 방 리스트 조회 요청을 보낼 시, 실행되는 시간이 현저히 줄어들었습니다. 
+![채팅 방 리스트 불러오기 후 - 결과 2](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/8db0cac2-fa1f-4a53-a759-f7b59c16d734)
+
+<br>
+
+</details>
+
+
+<br>
+  
+
+<br>
+  
+## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 👨‍👩‍👧‍👦 팀원 소개 & 팀원 역할 <br>
 
