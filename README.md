@@ -74,7 +74,7 @@
     
 <br>
 
-|  **도입 이유** | react-query를 사용해 서버 상태를 관리하여 캐싱 처리로 속도와 성능을 개선 하기 위해 도입하였습니다.  |
+| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| react-query를 사용해 서버 상태를 관리하여 캐싱 처리로 속도와 성능을 개선 하기 위해 도입하였습니다.  |
 |:--------:|:---|
 | **문제 상황** | 저희 OHPick서비스는 사용자들에게 많은 오피스 데이터들을 쾌적하게 제공해야 합니다. 특히 주요 기능인 오피스 검색(무한스크롤), 채팅 등에서 사용자의 검색 필터링에 따라 수시로 데이터 결과 값이 변경되어야 합니다. 많은 데이터가 수시로 변경되는 부분에 있어 속도와 성능 관련하여 문제가 있을 수 있다고 판단하여 성능적인 측면에서 캐싱 처리를 고민했습니다. |
 | **해결 방안** | 1. Axios만을 이용한 데이터 통신 <br> 2. Axios와 React Query를 함께 사용하여 서버 상태 관리 |
@@ -90,7 +90,7 @@
     
 <br>
 
-|  **도입 이유** | 전역 상태 관리 라이브러리 중 React에 최적화 되어있고, 안정적인 recoil을  recoil을 사용하여 간편하게 로그인 전역 상태, 모달 상태, 검색 쿼리, 토글 등의 클라이언트 상태를 관리하기 위해 도입하였습니다.  |
+| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 전역 상태 관리 라이브러리 중 React에 최적화 되어있고, 안정적인 recoil을  recoil을 사용하여 간편하게 로그인 전역 상태, 모달 상태, 검색 쿼리, 토글 등의 클라이언트 상태를 관리하기 위해 도입하였습니다.  |
 |:---:|:---|
 | **문제 상황** | 저희 OHPick서비스의 검색, 모달, 로그인 상태관리 등의 기능에서 클라이언트의 전역 상태 관리의 필요성을 느꼈습니다. 주요 데이터인 오피스 데이터들은 주로 서버 상태 관리로 이루어지기 때문에 그밖에 간단하고 가벼운 기능들을 편리하게 관리할 수 있는 전역 상태 관리 라이브러리가 필요했습니다. 기존에는 Redux 또는 useContext를 사용하였었으나 단지 전역 상태를 관리하는 데에 너무 불필요하게 복잡한 과정을 거쳐야 하고, Boiler Plate 초기 세팅이 요구되는 등의 문제가 있어 더 편리하고 가벼운 라이브러리가 필요했습니다. |
 | **해결 방안** | 1. Redux로 관리 <br> 2. useContext로 전역 관리 <br> 3. Recoil로 관리 |
@@ -106,7 +106,7 @@
     
 <br>
 
-|  **도입 이유** | ESLint(airBnB)와 Prettier로 컨벤션을 강제(에러), 강제한 컨벤션 규칙에 맞게 Prettier에서 자동으로 교정해 주도록 설정하여 컨벤션에 맞춰 코드를 작성할 수 있도록 하기 위해 도입하였습니다.  |
+| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | ESLint(airBnB)와 Prettier로 컨벤션을 강제(에러), 강제한 컨벤션 규칙에 맞게 Prettier에서 자동으로 교정해 주도록 설정하여 컨벤션에 맞춰 코드를 작성할 수 있도록 하기 위해 도입하였습니다.  |
 |:---:|:---|
 | **문제 상황** | 팀원과의 협업 과정 중에서 변수명, 함수명, api명 등 컨벤션적으로 맞지 않는 부분들이 발생하여 코드의 통일성, 가독성이 좋지 않고 혼란스러운 상황이 많이 발생 하였습니다. |
 | **해결 방안** | 1. ESLint 기본설정과 Prettier를 사용해 컨벤션을 유지한다. <br> 2. ESLint airBnB와 Prettier를 사용해 좀 더 강력한 컨벤션을 강제하여 규칙을 준수하도록 한다. |
@@ -122,7 +122,7 @@
     
 <br>
 
-| **도입 이유** | SCSS 전처리기를 이용해 변수, 함수, 문법 등을 이용해 CSS 코드를 좀 더 편리하게  사용하고 관리하기 위해 도입하였습니다.  |
+|<br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | SCSS 전처리기를 이용해 변수, 함수, 문법 등을 이용해 CSS 코드를 좀 더 편리하게  사용하고 관리하기 위해 도입하였습니다.  |
 |:---:|:---|
 | **문제 상황** | 서비스가 복잡해짐에 따라 CSS파일들을 관리하는데 어려움을 느꼈고, 더 편리한 CSS문법을 사용해 중복되는 코드의 재사용성을 높이면서 유지 보수가 용이하게 하는 전처리기의 필요성을 느끼게 되었습니다. |
 | **해결 방안** | 1. Redux로 관리 <br> 2. useContext로 전역 관리 <br> 3. Recoil로 관리 |
@@ -144,7 +144,7 @@
     
 <br>
 
-|  **도입 이유** | 사용자들이 여러 게시물의 작성자들과 다른 내용의 채팅을 원활하게 할 수 있도록 하기 위해서 채팅 기능을 도입하였습니다.  |
+| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 사용자들이 여러 게시물의 작성자들과 다른 내용의 채팅을 원활하게 할 수 있도록 하기 위해서 채팅 기능을 도입하였습니다.  |
 |:--------:|:---|
 | **문제 상황** | 저희 서비스의 주요 기능 중 하나인 게시글의 작성자와 소통을 하게 해주는 실시간 채팅 기능을 도입하기로 결정하였습니다. 이때 사용자는 여러 게시물의 작성자와 각기 다른 내용의 채팅이 실시간으로 가능해야 하기에, 여러 채팅 방에 접속이 가능해야 했는데, 이 기능을 어떻게 구현 할지 고민이 되었습니다.  |
 | **해결 방안** | 1. http 방식을 사용해서 채팅 구현  <br> 2. WebSocket 방식을 사용하여 구현  |
@@ -159,7 +159,7 @@
     
 <br>
 
-|  **도입 이유** | 서비스의 주요 기능에 사용 될 복잡한 쿼리를 해결할 방법이 필요하여 도입하였습니다.  |
+| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | 서비스의 주요 기능에 사용 될 복잡한 쿼리를 해결할 방법이 필요하여 도입하였습니다.  |
 |:---:|:---|
 | **문제 상황** | 저희 서비스의 키워드 검색, 필터링 검색, 및 채팅 방 리스트 불러오기 같은 주요 기능들을 구현하기 위해서는 복잡하지만, 알맞은 쿼리를 데이터베이스에 보내어서 필요한 데이터를 가져와야 했습니다. 이때 필요한 쿼리를 어떻게 작성 해야 할지 고민 되었습니다. |
 | **해결 방안** | 1. 기본 JPA <br> 2. JPQL <br> 3. Query DSL |
@@ -175,7 +175,7 @@
     
 <br>
 
-|  **도입 이유** | 프로젝트의 원활한 진행을 위해 배포가 자동으로 이루어져야 해서 도입하였습니다.   |
+| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| 프로젝트의 원활한 진행을 위해 배포가 자동으로 이루어져야 해서 도입하였습니다.   |
 |:---:|:---|
 | **문제 상황** | 백엔드 측 코드에 변경이 생길 때 마다 프로젝트 빌드 및 서버에 파일을 옮겨서 배포를 직접 해줘야 하는 상황이 반복적으로 발생함으로써 클라이언트에게 빠르게 코드를 반영해주기 어려웠습니다.  |
 | **해결 방안** | 1. Jenkins <br> 2. Dockers <br> 3. Git Action  |
@@ -756,9 +756,9 @@ light-house에서 제시하는 경고를 확인하고, 웹 접근성에서 추�
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 팀원 소개 & 팀원 역할 👨‍👩‍👧‍👦 <br>
 <br>
 
-| **역할** | **이름** | **담당** | **Github** | **E-mail** |
-| --- | --- | --- | --- | --- |
-| FE ⭐<br> `Leader` | 이준영 | 로그인(일반) <br> 소셜 로그인(카카오) <br> 인트로페이지 <br> 메인페이지 <br>  글작성 페이지 <br> 검색 기능 <br> 필터(정렬, 지역) <br> 지도 API <br> 위치 검색, 페이지네이션 <br> 무한스크롤 <br> 채팅, 멀티 이미지| https://github.com/junvely | junvely97@gmail.com |
+| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>**역할** |  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>  **이름**  | **담당** | **Github** | **E-mail** |
+| :---: | :---: | --- | :---: | :---: |
+| FE ⭐<br> `Leader` | 이준영  | 로그인(일반) <br> 소셜 로그인(카카오) <br> 인트로페이지 <br> 메인페이지 <br>  글작성 페이지 <br> 검색 기능 <br> 필터(정렬, 지역) <br> 지도 API <br> 위치 검색, 페이지네이션 <br> 무한스크롤 <br> 채팅, 멀티 이미지| https://github.com/junvely | junvely97@gmail.com |
 | FE | 왕정민 | 상세 페이지 <br> 예약 및 예약 확인 페이지 <br> 글 작성 페이지(멀티이미지 업로드) <br> 글 수정 페이지 <br> 마이페이지 <br> 채팅 목록 및 채팅 룸 <br> 이메일 인증 <br> 회원가입 | https://github.com/v-va | poruch0915@gmail.com |
 | BE ⭐<br>  `Vice Leader` | 박우현 |서버 배포(AWS, EC2, CI/CD, Git Action) <br> 채팅 (STOMP 웹소켓) <br> 예약 시스템 <br> 예외처리 <br> jwt 리프레쉬 토큰 쿠키  <br> route 53 https <br> 탄력IP <br> 이메일 인증 <br> Statement Inspector를 사용한 요청 쿼리 개수 및 총 요청 시간 파악 <br> 스프링 스케쥴러 | https://github.com/JoshWPark | parkjoshua98@gmail.com |
 | BE | 마동찬 |게시글 CRUD <br> 좋아요 <br> S3이미지  <br> 카카오로그인  <br> 채팅(STOMP 웹소켓) <br> 마이페이지내 목록조회 | https://github.com/mdc2684 | mdc53@naver.com |
