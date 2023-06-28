@@ -1,6 +1,8 @@
 # ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) Project
 <br>
-![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/aae14924-4528-4e0c-b1b7-524d75168549)
+
+![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/431fe537-fb2b-4583-85d9-7b7ce990d0fd)
+
 
 > ✨ 주특기 : `React``Spring`
 > 🚩 개발 기간 : 2023.05.23 ~ 2023.06.29
