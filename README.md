@@ -1,14 +1,14 @@
-# ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) Project소개
+<div align="left">
+# <div align="center"> ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) Project 소개 </div>
 <br>
-
 ![브로셔메인](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/431fe537-fb2b-4583-85d9-7b7ce990d0fd)
+</div>
 
-
-> ✨ 주특기 : `React` `Spring` <br>
->
-> 🚩 개발 기간 : 2023.05.23 ~ 2023.06.29 <br>
+> ✨ STACK : `React` `Spring` <br>
 >
 > ➡️ URL : https://ohpick.shop/
+> 
+> 🚩 개발 기간 : 2023.05.23 ~ 2023.06.29 <br>
 
 <br>
 
