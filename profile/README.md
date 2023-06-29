@@ -34,7 +34,7 @@
 
 <details>
   <summary> 1️⃣ 게시글 CRUD 기능 (포스트 작성, 조회, 수정, 삭제) </summary>
-  
+    ![CRUD (1)](https://github.com/ShareOffice-11/.github/assets/83201893/6e15d7f2-2b91-4f53-8007-df82d118e091)
 </details>
 <details>
   <summary> 2️⃣ 예약 및 채팅 기능 </summary>
