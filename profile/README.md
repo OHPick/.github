@@ -60,7 +60,7 @@
 ### 👥 FRONT-END
 
 <details>
-  <summary> <b>Reac-Query</b> </summary>
+  <summary> <b>React-Query</b> </summary>
     
 <br>
 
