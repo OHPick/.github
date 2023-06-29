@@ -34,18 +34,28 @@
 
 <details>
   <summary> 1️⃣ 게시글 CRUD 기능 (포스트 작성, 조회, 수정, 삭제) </summary>
-    ![CRUD (1)](https://github.com/ShareOffice-11/.github/assets/83201893/6e15d7f2-2b91-4f53-8007-df82d118e091)
+    
+  ![CRUD (1)](https://github.com/ShareOffice-11/.github/assets/83201893/299152e4-5eca-4bca-888b-5e953fa9d896)
+
+    
 </details>
 <details>
   <summary> 2️⃣ 예약 및 채팅 기능 </summary>
-  
+    
+  ![예약-및-채팅](https://github.com/ShareOffice-11/.github/assets/83201893/b2082d05-36f9-4262-84b3-406b43550688)
+
 </details>
 <details>
   <summary> 3️⃣ 키워드 / 지역 별 검색 및 로그인, 회원가입 기능 </summary> 
   
+  ![검색-및-로그인 (1)](https://github.com/ShareOffice-11/.github/assets/83201893/73eec018-aad9-487c-ab13-bb22d63388bd)
+
 </details>
 <details>
   <summary> 4️⃣ 마이페이지 (글 목록 조회, 로그아웃 및 회원 탈퇴) 기능 </summary>
+
+  ![마이페이지](https://github.com/ShareOffice-11/.github/assets/83201893/a6e60344-861e-476d-9b48-1163aa6f5d25)
+
   
 </details>
 
