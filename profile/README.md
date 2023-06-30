@@ -74,7 +74,7 @@
     
 <br>
 
-| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| react-query를 사용해 서버 상태를 관리하여 캐싱 처리로 속도와 성능을 개선 하기 위해 도입하였습니다.  |
+| <br>  **도입 이유** <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| react-query를 사용해 서버 상태를 관리하고 캐싱 처리로 속도와 성능을 개선 하기 위해 도입하였습니다.  |
 |:--------:|:---|
 | **문제 상황** | 저희 OHPick서비스는 사용자들에게 많은 오피스 데이터들을 쾌적하게 제공해야 합니다. 특히 주요 기능인 오피스 검색(무한스크롤), 채팅 등에서 사용자의 검색 필터링에 따라 수시로 데이터 결과 값이 변경되어야 합니다. 많은 데이터가 수시로 변경되는 부분에 있어 속도와 성능 관련하여 문제가 있을 수 있다고 판단하여 성능적인 측면에서 캐싱 처리를 고민했습니다. |
 | **해결 방안** | 1. Axios만을 이용한 데이터 통신 <br> 2. Axios와 React Query를 함께 사용하여 서버 상태 관리 |
