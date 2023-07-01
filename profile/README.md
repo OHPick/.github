@@ -85,7 +85,7 @@
 
 | **오피스 조회 / 무한스크롤** | **포스트 작성** | **포스트 수정,삭제** |
 | :-: | :-: | :-: |
-| <img src="/public/image/무한스크롤.gif" width="220" /> | <img src="/public/image/포스팅.gif" width="220" /> | <img src="/public/image/수정.gif" width="220" /> |
+| <img src="./public/image/무한스크롤.gif" width="220" /> | <img src="./public/image/포스팅.gif" width="220" /> | <img src="./public/image/수정.gif" width="220" /> |
 
 </details>
 </details>
@@ -95,7 +95,7 @@
 
 | **예약 하기** | **예약 확인 채팅 메세지** | **채팅 기능, 목록** |
 | :-: | :-: | :-: |
-| <img src="/public/image/예약하기.gif" width="220" /> | <img src="/public/image/예약후메세지.gif" width="220" /> | <img src="/public/image/채팅기능.gif" width="220" /> |
+| <img src="./public/image/예약하기.gif" width="220" /> | <img src="./public/image/예약후메세지.gif" width="220" /> | <img src="./public/image/채팅기능.gif" width="220" /> |
 
 </details>
 <details>
@@ -104,7 +104,7 @@
 
 | **검색 기능(키워드/필터)** | **소셜 로그인** | **회원가입** |
 | :-: | :-: | :-: |
-| <img src="/public/image/검색.gif" width="220" /> | <img src="/public/image/소셜로그인.gif" width="220" /> | <img src="/public/image/회원가입.gif" width="220" /> |
+| <img src="./public/image/검색.gif" width="220" /> | <img src="./public/image/소셜로그인.gif" width="220" /> | <img src="./public/image/회원가입.gif" width="220" /> |
 
 </details>
 <details>
@@ -113,7 +113,7 @@
 
 | **마이 페이지(나의 오피스, 좋아요)** | **예약 현황** | **프로필 편집** |
 | :-: | :-: | :-: |
-| <img src="/public/image/마이페이지.gif" width="220" /> | <img src="/public/image/예약현황.gif" width="220" /> | <img src="/public/image/프로필편집.gif" width="220" /> |
+| <img src="./public/image/마이페이지.gif" width="220" /> | <img src="./public/image/예약현황.gif" width="220" /> | <img src="./public/image/프로필편집.gif" width="220" /> |
 
 </details>
 
