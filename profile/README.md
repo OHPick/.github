@@ -738,3 +738,7 @@ JWT 액세스 토큰, 리프레시 토큰을 클라이언트에 보낼 때, resp
 | BE | 마동찬 | 게시글 CRUD <br> 좋아요 <br> S3이미지 <br> 카카오로그인 <br> 채팅(STOMP 웹소켓) <br> 마이페이지내 목록조회 | https://github.com/mdc2684 | mdc53@naver.com |
 | BE | 강준수 | 회원가입, 로그인, 로그아웃, 회원탈퇴 <br> Swagger <br> Redis <br> 메인페이지 필터링, 페이지네이션 | https://github.com/Kangjunesu | kulbit92@naver.com |
 | Designer | 김민선 | 디자인 담당 |  |  |
+
+
+![오픽화이팅](https://github.com/OHPick/.github/assets/83201893/264ab20b-4b85-4314-ae9e-053db545dcbb)
+
