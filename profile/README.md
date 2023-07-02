@@ -730,9 +730,8 @@ JWT 액세스 토큰, 리프레시 토큰을 클라이언트에 보낼 때, resp
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 팀원 소개 & 팀원 역할 👨‍👩‍👧‍👦 <br>
 
 
-<div align=center>
-    
-![오픽화이팅](https://github.com/OHPick/.github/assets/83201893/264ab20b-4b85-4314-ae9e-053db545dcbb)
+<div align=center width=100%>
+<img src="https://github.com/OHPick/.github/assets/83201893/264ab20b-4b85-4314-ae9e-053db545dcbb" width=100% />
 
 </div>
 
