@@ -731,7 +731,9 @@ JWT 액세스 토큰, 리프레시 토큰을 클라이언트에 보낼 때, resp
 <br>
 
 <div align=center>
-    ![오픽화이팅](https://github.com/OHPick/.github/assets/83201893/264ab20b-4b85-4314-ae9e-053db545dcbb)
+    
+![오픽화이팅](https://github.com/OHPick/.github/assets/83201893/264ab20b-4b85-4314-ae9e-053db545dcbb)
+
 </div>
 
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>**역할** | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> **이름** | **담당** | **Github** | **E-mail** |
