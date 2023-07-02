@@ -728,7 +728,7 @@ JWT 액세스 토큰, 리프레시 토큰을 클라이언트에 보낼 때, resp
 <br>
   
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 팀원 소개 & 팀원 역할 👨‍👩‍👧‍👦 <br>
-<br>
+
 
 <div align=center>
     
