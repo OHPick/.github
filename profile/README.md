@@ -730,6 +730,10 @@ JWT 액세스 토큰, 리프레시 토큰을 클라이언트에 보낼 때, resp
 ## ![로고](https://github.com/ShareOffice-11/OHPickOfficial/assets/83201893/064c9d75-fbd9-40b2-867c-a31359cfc231) 팀원 소개 & 팀원 역할 👨‍👩‍👧‍👦 <br>
 <br>
 
+<div align=center>
+    ![오픽화이팅](https://github.com/OHPick/.github/assets/83201893/264ab20b-4b85-4314-ae9e-053db545dcbb)
+</div>
+
 | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>**역할** | &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br> **이름** | **담당** | **Github** | **E-mail** |
 | :-: | :-: | --- | :-: | :-: |
 | FE ⭐<br> `Leader` | 이준영 | 로그인(일반) <br> 소셜 로그인(카카오) <br> 인트로페이지 <br> 메인페이지 <br> 글작성 페이지 <br> 검색 기능 <br> 필터(정렬, 지역) <br> 지도 API <br> 위치 검색, 페이지네이션 <br> 무한스크롤 <br> 채팅, 멀티 이미지 | https://github.com/junvely | junvely97@gmail.com |
@@ -740,5 +744,4 @@ JWT 액세스 토큰, 리프레시 토큰을 클라이언트에 보낼 때, resp
 | Designer | 김민선 | 디자인 담당 |  |  |
 
 
-![오픽화이팅](https://github.com/OHPick/.github/assets/83201893/264ab20b-4b85-4314-ae9e-053db545dcbb)
 
